@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "devgioportfolio"
+  },
+  "targets": {
+    "devgioportfolio": {
+      "hosting": {
+        "angularPortfolio": [
+          "devgioportfolio"
+        ]
+      }
+    }
   }
 }
