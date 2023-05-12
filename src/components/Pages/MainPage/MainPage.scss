@@ -1,3 +1,21 @@
+$primary-color: #00500A;
+@import 'loaders.css/src/animations/ball-pulse.scss';
 body {
   font-family: "DM Mono", monospace;
+}
+
+.loader-hidden {
+    display: none;
+}
+
+.loader-active {
+    display: block;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
