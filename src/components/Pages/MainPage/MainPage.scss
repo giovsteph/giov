@@ -1,16 +1,7 @@
 @import "../../../assets/theme/theme.scss";
-@import 'loaders.css/src/animations/ball-pulse.scss';
 
 body {
   font-family: "DM Mono", monospace;
-}
-
-.loader-hidden {
-    display: none;
-}
-
-.loader-active {
-    display: block;
 }
 
 .container {
