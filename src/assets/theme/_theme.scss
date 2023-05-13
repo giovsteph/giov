@@ -1,8 +1,21 @@
-//theme color
+//Light Theme Colors
 
-$primary-color: #00500A;
-$secondary-color: #D2FFE6;
-$accent-color: #BE7C4D;
-$primary-text: #343434;
-$secondary-text: #828A95;
-$background-color: #FAFAFA;
+$light-primary: #002905;
+$light-secondary: #D2FFE6;
+$light-accent: #0E7C7B;
+$light-primary-text: #1F1F1F;
+$light-secondary-text: #828A95;
+$light-background: #EFEAE6;
+
+//Dark Theme Colors
+
+$dk-first-main: #924DF9;
+$dk-second-main: #363636;
+$dk-third-main: #7A257E;
+$dk-first-dark: #100F10;
+$dk-second-dark: #1B1B1B;
+$dk-third-dark: #242424;
+$dk-first-text: rgba(#fff,0.96);
+$dk-second-text: rgba(#fff,0.67);
+$dk-third-text: rgba(#fff, 0.45);
+
