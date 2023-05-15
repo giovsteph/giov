@@ -12,7 +12,7 @@
 }
 
 .primary:hover {
-    background-color: $dk-first-main-lighter;
+    background-color: $dk-first-main-transparency;
     color: $dk-first-main !important;
 }
 
@@ -22,6 +22,11 @@
 }
 
 .secondary:hover {
-    background-color: $dk-third-main-lighter;
+    background-color: $dk-third-main-transparency;
     color: $dk-third-main !important;
+}
+
+.smaller {
+    padding: 1rem !important;
+    line-height: 1 !important;
 }
