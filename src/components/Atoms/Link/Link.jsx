@@ -15,7 +15,7 @@ const Link = ({ href, children, animated }) => {
         </a>
       ) : (
         <a
-          className="notAnimated"
+          className="normal"
           href={href}
           target="_blank"
           rel="noopener noreferrer"
