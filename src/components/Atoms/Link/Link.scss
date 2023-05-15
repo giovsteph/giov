@@ -1,0 +1,26 @@
+@import "../../../assets/theme/theme.scss";
+
+a {
+  position: relative;
+  color: $dk-third-main !important;
+}
+
+.animated::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0;
+  background-color: $dk-third-main;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.animated:hover::after {
+  width: 100%;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
