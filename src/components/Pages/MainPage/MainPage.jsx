@@ -1,29 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./MainPage.scss";
-import code from "../../../assets/icons/code.json";
-
-import Lottie from "lottie-react";
+import Loader from "../../Atoms/Loader/Loader";
 
 export default function MainPage() {
   const [isLoading, setIsLoading] = useState(true);
 
-  setTimeout(() => {
-    setIsLoading(false);
-  }, 3000);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
 
-  return (
-    <>
-      <div className="container">
-        {isLoading ? (
-          <div className="loader-container">
-            <div className="loader">
-              <Lottie animationData={code} loop={true} />
-            </div>
-          </div>
-        ) : (
-          <div className="container"></div>
-        )}
-      </div>
-    </>
-  );
+    return () => clearTimeout(timer);
+  }, []);
+
+  return <>{isLoading ? <Loader /> : <div className="container"></div>}</>;
 }
