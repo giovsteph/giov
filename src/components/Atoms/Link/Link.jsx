@@ -1,14 +1,14 @@
 import React from "react";
 import "./Link.scss";
 
-const Link = ({ href, children, animated }) => {
+const Link = ({ href, children, animated, target }) => {
   return (
     <>
       {animated ? (
         <a
           className="animated"
           href={href}
-          target="_blank"
+          target={target}
           rel="noopener noreferrer"
         >
           {children}
@@ -17,7 +17,7 @@ const Link = ({ href, children, animated }) => {
         <a
           className="normal"
           href={href}
-          target="_blank"
+          target={target}
           rel="noopener noreferrer"
         >
           {children}
