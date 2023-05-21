@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./MainPage.scss";
 import Loader from "../../Atoms/Loader/Loader";
 import Header from "../../Organisms/Header/Header";
+import Sidebar from "../../Molecules/Sidebar/Sidebar";
 
 export default function MainPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -21,6 +22,7 @@ export default function MainPage() {
       ) : (
         <>
           <Header />
+          <Sidebar />
           <div className="mainContainer">
             <div className="container">FIRST SECTION</div>
             <div className="container" id="about">
