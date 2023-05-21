@@ -1,0 +1,30 @@
+@import "../../../assets/theme/theme.scss";
+
+.footer {
+    padding: 50px 20px 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;        
+
+        svg {
+            margin: 10px;
+            transition: transform 330ms ease-in-out;
+            transform: translateY(0px);
+        }
+
+        svg:hover {
+            fill: $dk-first-main-lighter;
+            transform: translateY(-10px);
+        }
+    }
+}
+
+.icon {
+    font-size: 18px;
+}
