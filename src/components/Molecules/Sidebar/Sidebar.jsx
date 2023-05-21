@@ -6,7 +6,7 @@ import LinkedIn from "../../../assets/icons/linkedin";
 import Mail from "../../../assets/icons/mail";
 
 export default function Sidebar() {
-  let primaryColor = "#924DF9";
+  const primaryColor = "#924DF9";
 
   return (
     <>
