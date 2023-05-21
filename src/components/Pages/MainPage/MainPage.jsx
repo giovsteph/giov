@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./MainPage.scss";
 import Loader from "../../Atoms/Loader/Loader";
 import Header from "../../Organisms/Header/Header";
+import Footer from "../../Molecules/Footer/Footer";
 import Sidebar from "../../Molecules/Sidebar/Sidebar";
 
 export default function MainPage() {
   const [isLoading, setIsLoading] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -15,6 +17,14 @@ export default function MainPage() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       {isLoading ? (
@@ -22,7 +32,7 @@ export default function MainPage() {
       ) : (
         <>
           <Header />
-          <Sidebar />
+          {windowWidth <= 768 ? "" : <Sidebar />}
           <div className="mainContainer">
             <div className="container">FIRST SECTION</div>
             <div className="container" id="about">
@@ -47,6 +57,7 @@ export default function MainPage() {
               CONTACT
             </div>
           </div>
+          <Footer />
         </>
       )}
     </>
