@@ -69,16 +69,20 @@ const Header = () => {
           <nav className="mobile-nav">
             <ul className="mobile-nav-list">
               <li className="mobile-nav-item">
-                01. <Link href="#about">About</Link>
+                <p className="purple">01. </p>
+                <Link href="#about">About</Link>
               </li>
               <li className="mobile-nav-item">
-                02. <Link href="#experience">Experience</Link>
+                <p className="purple">02. </p>
+                <Link href="#experience">Experience</Link>
               </li>
               <li className="mobile-nav-item">
-                03. <Link href="#work">Work</Link>
+                <p className="purple">03. </p>
+                <Link href="#work">Work</Link>
               </li>
               <li className="mobile-nav-item">
-                04. <Link href="#contact">Contact</Link>
+                <p className="purple">04. </p>
+                <Link href="#contact">Contact</Link>
               </li>
               <li className="mobile-nav-item">
                 <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">

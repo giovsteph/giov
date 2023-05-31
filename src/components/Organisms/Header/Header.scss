@@ -178,6 +178,9 @@ body.disable-scroll {
 }
 
 .mobile-nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     position: absolute;
     top: 100%;
     right: 0;
@@ -186,16 +189,16 @@ body.disable-scroll {
     padding: 16px;
     background-color: $dk-second-main;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
 }
 
 .mobile-nav-list {
+    padding: 3em;
     list-style: none;
     margin: 0;
-    padding: 0;
 }
 
 .mobile-nav-item {
+    height: 5em;
     margin-bottom: 12px;
 }
 
@@ -206,4 +209,8 @@ body.disable-scroll {
 .mobile-nav-item a {
     color: #000000;
     text-decoration: none;
+}
+
+.purple {
+    color: $dk-first-main;
 }
