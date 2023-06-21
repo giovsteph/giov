@@ -34,9 +34,37 @@ export default function MainPage() {
           <Header />
           {windowWidth <= 768 ? "" : <Sidebar />}
           <div className="mainContainer">
-            <div className="container">FIRST SECTION</div>
+            <div className="container">
+              <div className="intro">
+                <p className="intro-purple">Hi, my name is</p>
+                <p className="title">Giovanna Ponce.</p>
+                <p className="title-sub">I build things for the web.</p>
+                <div className="bio">
+                  <p>
+                    I'm a software engineer specialized in front end
+                    development. I like to build (and ocassionally design)
+                    exceptional applications.
+                  </p>
+                  <p>
+                    Currently, my favorite front end framework is Angular, but I
+                    also like to use React.
+                  </p>
+                  <p>
+                    My abilities are currently being used at{" "}
+                    <a
+                      href="https://www.wizeline.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Wizeline
+                    </a>
+                    .
+                  </p>
+                </div>
+              </div>
+            </div>
             <div className="container" id="about">
-              ABOUT
+              <div className="about">About</div>
             </div>
             <br />
             <br />
