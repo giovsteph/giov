@@ -20,3 +20,43 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin-top: 20em;
+}
+
+.intro-purple {
+  color: $dk-first-main;
+  font-size: 20px;
+}
+
+.title {
+  font-size: 65px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
+
+  &-sub {
+    font-size: 65px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    color: $dk-second-main-lighter;
+  }
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  font-size: 18px;
+  margin: 20px 0px 0px;
+  max-width: 540px;
+}
+
+.about {
+  margin-top: 20em;
+}
