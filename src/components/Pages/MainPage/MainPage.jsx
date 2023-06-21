@@ -4,6 +4,7 @@ import Loader from "../../Atoms/Loader/Loader";
 import Header from "../../Organisms/Header/Header";
 import Footer from "../../Molecules/Footer/Footer";
 import Sidebar from "../../Molecules/Sidebar/Sidebar";
+import ProfilePictureFiltered from "../../../assets/photos/profile-pic-filter.jpg";
 
 export default function MainPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -64,7 +65,57 @@ export default function MainPage() {
               </div>
             </div>
             <div className="container" id="about">
-              <div className="about">About</div>
+              <div className="about">
+                <div class="about-title">
+                  <span className="numbers">01. </span> About Me
+                </div>
+                <div className="about-info">
+                  <div className="about-left">
+                    <p className="about-bio">
+                      Hello there! I'm Giovanna Ponce, a passionate software
+                      engineer currently working at Wizeline, where I thrive on
+                      tackling diverse projects for multiple clients. Before
+                      joining Wizeline, I honed my skills as a front-end
+                      developer in a dynamic startup environment. My journey in
+                      the tech world began in 2019 when I embarked on an
+                      exciting adventure with the{" "}
+                      <a
+                        href="https://www.laboratoria.la/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Laboratoria
+                      </a>{" "}
+                      bootcamp. Since then, I've been actively leveraging my
+                      expertise in Angular, React, and associated technologies
+                      to craft remarkable digital solutions. Let's embark on a
+                      journey together, where we can bring your ideas to life in
+                      the most innovative and impactful ways!
+                    </p>
+                    <p>
+                      Here are a few technologies I’ve been working with
+                      recently:
+                    </p>
+                    <ul className="about-list">
+                      <li>Angular 14</li>
+                      <li>React.js</li>
+                      <li>Jest</li>
+                      <li>Node.js</li>
+                      <li>HTML5</li>
+                      <li>CSS3</li>
+                      <li>SASS</li>
+                      <li>Jasmine</li>
+                    </ul>
+                  </div>
+                  <div className="about-right">
+                    <img
+                      className="framed"
+                      src={ProfilePictureFiltered}
+                      alt="profile-pic"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
             <br />
             <br />
