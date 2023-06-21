@@ -85,7 +85,11 @@ const Header = () => {
                 <Link href="#contact">Contact</Link>
               </li>
               <li className="mobile-nav-item">
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://drive.google.com/file/d/1-3EhEKSeIaHHqvsnVq328pezad4UmqVl/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button className="primary smaller">Resume</Button>
                 </a>
               </li>
@@ -120,7 +124,11 @@ const Header = () => {
             </li>
           </ul>
           <div className="btnContainer">
-            <a href="/resume.pdf" target="_blank">
+            <a
+              href="https://drive.google.com/file/d/1-3EhEKSeIaHHqvsnVq328pezad4UmqVl/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button className="primary smaller">Resume</Button>
             </a>
           </div>
