@@ -5,6 +5,7 @@ import Header from "../../Organisms/Header/Header";
 import Footer from "../../Molecules/Footer/Footer";
 import Sidebar from "../../Molecules/Sidebar/Sidebar";
 import ProfilePictureFiltered from "../../../assets/photos/profile-pic-filter.jpg";
+import TabPanel from "../../Molecules/TabPanel/TabPanel";
 
 export default function MainPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -121,7 +122,12 @@ export default function MainPage() {
             <br />
             <br />
             <div className="container" id="experience">
-              EXPERIENCE
+              <div className="experience">
+                <div class="experience-title">
+                  <span className="numbers">02. </span> Where I've Worked
+                </div>
+                <TabPanel />
+              </div>
             </div>
             <br />
             <br />
