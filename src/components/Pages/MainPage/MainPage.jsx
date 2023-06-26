@@ -6,10 +6,46 @@ import Footer from "../../Molecules/Footer/Footer";
 import Sidebar from "../../Molecules/Sidebar/Sidebar";
 import ProfilePictureFiltered from "../../../assets/photos/profile-pic-filter.jpg";
 import TabPanel from "../../Molecules/TabPanel/TabPanel";
+import Card from "../../Molecules/Card/Card";
 
 export default function MainPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const projects = [
+    {
+      id: "1",
+      title: "DIYers",
+      description:
+        "The visual discovery engine for people who enjoy DIY. Pinterest based social network, whose main purpose is to help users discover recipes, crafting inspiration, home hacks and more ideas to try.",
+      picture: "https://i.ibb.co/rpf4dfR/Screenshot-2023-06-25-at-20-32-26.png",
+      technologies: ["React", "HTML5/CSS3", "Firebase"],
+      githubLink: "https://github.com/giovsteph/DIYers",
+      projectLink: "https://laboratoriadiyers.firebaseapp.com/#/signIn",
+    },
+    {
+      id: "2",
+      title: "QR Code Generator",
+      description:
+        "This project allows you to create a QR Code with text or an url and download it in a PNG format. This project uses the library react-qr-code.",
+      picture: "https://i.ibb.co/L174Rvn/Screenshot-2023-06-26-at-14-58-54.png",
+      technologies: ["React", "HTML5/CSS3", "Firebase", "Jest"],
+      githubLink: "https://github.com/giovsteph/qr-generator",
+      projectLink: "https://qr-generator-df60a.web.app/",
+    },
+    {
+      id: "3",
+      title: "Bleiben Note",
+      description:
+        "Bleiben-Note is German for 'Remember-Note', which takes us back to our signature phrase, 'The app that remembers for you'. Simple to-do app with login features.",
+      picture: "https://i.ibb.co/Y8xJ7sS/Screenshot-2023-06-26-at-15-06-23.png",
+      technologies: ["React", "HTML5/CSS3", "Firebase", "Jest"],
+      githubLink: "https://github.com/giovsteph/Bleiben-Note",
+      projectLink: "https://bleiben-note.web.app/",
+    },
+  ];
+
+  // const projects = ["hello", "hi"];
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -67,7 +103,7 @@ export default function MainPage() {
             </div>
             <div className="container" id="about">
               <div className="about">
-                <div class="about-title">
+                <div className="about-title">
                   <span className="numbers">01. </span> About Me
                 </div>
                 <div className="about-info">
@@ -123,7 +159,7 @@ export default function MainPage() {
             <br />
             <div className="container" id="experience">
               <div className="experience">
-                <div class="experience-title">
+                <div className="experience-title">
                   <span className="numbers">02. </span> Where I've Worked
                 </div>
                 <TabPanel />
@@ -133,7 +169,16 @@ export default function MainPage() {
             <br />
             <br />
             <div className="container" id="work">
-              WORK
+              <div className="work">
+                <div className="work-title">
+                  <span className="numbers">03. </span> Some things I've built
+                </div>
+                <div>
+                  {projects.map((proj) => (
+                    <Card projectData={proj} key={proj.id} />
+                  ))}
+                </div>
+              </div>
             </div>
             <br />
             <br />

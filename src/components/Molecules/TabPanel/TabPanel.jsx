@@ -20,7 +20,8 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          {/* <Typography>{children}</Typography> */}
+          <Typography component="div">{children}</Typography>
         </Box>
       )}
     </div>
@@ -72,17 +73,17 @@ export default function VerticalTabs() {
       <TabPanel value={value} index={0}>
         <div>
           <p>
-            Software Engineer{" "}
+            <span>Software Engineer </span>
             <a
               href="https://www.wizeline.com/"
               rel="noreferrer"
               target="_blank"
             >
               @ Wizeline
-            </a>{" "}
+            </a>
           </p>
           <p>Jan 2022 - Present</p>
-          <ul>
+          <ul className="ul-list">
             <li>
               Actively participating in the development process throughout the
               software lifecycle using Scrum and Agile methodologies.
@@ -103,13 +104,13 @@ export default function VerticalTabs() {
       <TabPanel value={value} index={1}>
         <div>
           <p>
-            Front End Developer{" "}
+            <span>Front End Developer </span>
             <a href="https://neondomain.com/" rel="noreferrer" target="_blank">
               @ Neon Domain
-            </a>{" "}
+            </a>
           </p>
           <p>May 2020 - December 2021</p>
-          <ul>
+          <ul className="ul-list">
             <li>
               Development and implementation of software solutions based on
               client's requirements.
@@ -120,7 +121,7 @@ export default function VerticalTabs() {
             <li>Checking for errors and debugging websites</li>
             <li>
               Improving existing design based on UX/UI principles and
-              implementing responsive design for mobiledevices.
+              implementing responsive design for mobile devices.
             </li>
             <li>
               Developing with technologies such as Angular, Sass, REST, Git,
@@ -132,17 +133,17 @@ export default function VerticalTabs() {
       <TabPanel value={value} index={2}>
         <div>
           <p>
-            Front End Developer Bootcamp{" "}
+            <span>Front End Developer Bootcamp </span>
             <a
               href="https://www.laboratoria.la/"
               rel="noreferrer"
               target="_blank"
             >
               @ Laboratoria
-            </a>{" "}
+            </a>
           </p>
           <p>October 2019 - May 2020</p>
-          <ul>
+          <ul className="ul-list">
             <li>Simulated work environment.</li>
             <li>Learning TDD using Jest and React-Testing-Library.</li>
             <li>

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ExternaLink({ size = 18, color = "black" }) {
+export default function ExternalLink({ size = 18, color = "black" }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
