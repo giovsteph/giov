@@ -9,7 +9,7 @@ import TabPanel from "../../Molecules/TabPanel/TabPanel";
 import Card from "../../Molecules/Card/Card";
 
 export default function MainPage() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const projects = [
@@ -44,8 +44,6 @@ export default function MainPage() {
       projectLink: "https://bleiben-note.web.app/",
     },
   ];
-
-  // const projects = ["hello", "hi"];
 
   useEffect(() => {
     const timer = setTimeout(() => {
