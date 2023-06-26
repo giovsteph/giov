@@ -93,6 +93,7 @@ body {
   &-bio {
     text-align: left;
     font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
   &-list {
@@ -107,8 +108,9 @@ body {
 }
 
 .framed {
-  height: 350px;
-  width: 350px;
+  height: 325px;
+  margin-left: 5em;
+  width: 325px;
   object-fit: cover;
   box-shadow:
     -50px -50px 0 -40px $dk-first-main,
@@ -120,6 +122,20 @@ body {
 }
 
 .experience {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15em;
+  width: 60vw;
+  max-width: 70vw;
+
+  &-title {
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 2em;
+  }
+}
+
+.work {
   display: flex;
   flex-direction: column;
   margin-top: 15em;
