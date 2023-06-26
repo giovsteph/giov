@@ -1,0 +1,32 @@
+@import "../../../assets/theme/theme.scss";
+
+.btn {
+    background-color: transparent;
+    padding: 1.25rem 1.75rem !important;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.primary {
+    border: 1px solid $dk-first-main !important;
+    color: $dk-first-main;
+}
+
+.primary:hover {
+    background-color: $dk-first-main-transparency;
+    color: $dk-first-main !important;
+}
+
+.secondary {
+    border: 1px solid $dk-third-main !important;
+    color: $dk-third-main;
+}
+
+.secondary:hover {
+    background-color: $dk-third-main-transparency;
+    color: $dk-third-main !important;
+}
+
+.smaller {
+    padding: 1rem !important;
+    line-height: 1 !important;
+}

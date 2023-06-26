@@ -1,0 +1,246 @@
+@import "../../../assets/theme/theme.scss";
+
+body {
+  font-family: "DM Mono", monospace;
+  color: $dk-first-text !important;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100% !important;
+  padding-top: 10px;
+  margin-top: 60px;
+}
+
+.container {
+  height: auto !important;
+  max-width: 70vw !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin-top: 10em;
+}
+
+.intro-purple {
+  color: $dk-first-main;
+  font-size: 20px;
+}
+
+.title {
+  font-size: 65px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
+
+  &-sub {
+    font-size: 65px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    color: $dk-second-main-lighter;
+  }
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  font-size: 18px;
+  margin: 20px 0px 0px;
+  max-width: 540px;
+}
+
+.numbers {
+  color: $dk-first-main;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15em;
+  width: 60vw;
+  max-width: 70vw;
+
+  &-title {
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 2em;
+  }
+
+  &-info {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  &-left {
+    max-width: 50%;
+  }
+
+  &-right {
+  max-width: 50%;
+  }
+
+  &-bio {
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  &-list {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        list-style-type: circle;
+    
+      li {
+        margin-left: 1em;
+      }
+  }
+}
+
+.framed {
+  height: 325px;
+  margin-left: 5em;
+  width: 325px;
+  object-fit: cover;
+  box-shadow:
+    -50px -50px 0 -40px $dk-first-main,
+    50px 50px 0 -40px $dk-first-main;
+}
+
+.framed:hover {
+  filter: grayscale(80%);
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15em;
+  width: 60vw;
+  max-width: 70vw;
+
+  &-title {
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 2em;
+  }
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15em;
+  width: 60vw;
+  max-width: 70vw;
+
+  &-title {
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 2em;
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15em;
+  width: 60vw;
+  max-width: 70vw;
+  margin-bottom: 15em;
+
+  &-title {
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 2em;
+  }
+
+  &-text {
+    max-width: 50%
+  }
+}
+
+.comingSoonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #242424;
+}
+
+.lds-heart {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: rotate(45deg);
+  transform-origin: 40px 40px;
+}
+
+.lds-heart div {
+  top: 32px;
+  left: 32px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.lds-heart div:after,
+.lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+}
+
+.lds-heart div:before {
+  left: -24px;
+  border-radius: 50% 0 0 50%;
+}
+
+.lds-heart div:after {
+  top: -24px;
+  border-radius: 50% 50% 0 0;
+}
+
+@keyframes lds-heart {
+  0% {
+    transform: scale(0.95);
+  }
+
+  5% {
+    transform: scale(1.1);
+  }
+
+  39% {
+    transform: scale(0.85);
+  }
+
+  45% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
