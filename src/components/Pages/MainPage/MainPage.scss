@@ -148,3 +148,24 @@ body {
     margin-bottom: 2em;
   }
 }
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15em;
+  width: 60vw;
+  max-width: 70vw;
+  margin-bottom: 15em;
+
+  &-title {
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 2em;
+  }
+
+  &-text {
+    max-width: 50%
+  }
+}
