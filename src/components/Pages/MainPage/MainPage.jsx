@@ -7,6 +7,7 @@ import Sidebar from "../../Molecules/Sidebar/Sidebar";
 import ProfilePictureFiltered from "../../../assets/photos/profile-pic-filter.jpg";
 import TabPanel from "../../Molecules/TabPanel/TabPanel";
 import Card from "../../Molecules/Card/Card";
+import Button from "../../Atoms/Button/Button";
 
 export default function MainPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -184,7 +185,28 @@ export default function MainPage() {
             <br />
             <br />
             <div className="container" id="contact">
-              CONTACT
+              <div className="contact">
+                <div className="contact-title">
+                  <span className="numbers">04. </span> What's Next?
+                </div>
+                <div className="contact-text">
+                  <h2>Get in touch</h2>
+                  <br />
+                  <p>
+                    I'm currently looking for new opportunities, my inbox is
+                    always open. Whether you have a question or just want to say
+                    hi, I’ll try my best to get back to you!
+                  </p>
+                  <br />
+                  <a
+                    href="mailto:giov.ponce@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="primary smaller">Say Hello</Button>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <Footer />
