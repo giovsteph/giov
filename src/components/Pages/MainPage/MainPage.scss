@@ -87,7 +87,7 @@ body {
   }
 
   &-right {
-  max-width: 50%;
+    max-width: 50%;
   }
 
   &-bio {
@@ -104,6 +104,39 @@ body {
       li {
         margin-left: 1em;
       }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 80vw !important;
+  }
+
+  .intro {
+    margin-top: 5em;
+  }
+
+  .about {
+    width: 75vw;
+    margin-top: 10em;
+
+    &-info {
+      flex-direction: column;
+    }
+    &-left {
+      max-width: 100%;
+    }
+    &-right {
+      display: flex;
+      justify-content: center;
+      margin-top: 3em;
+      max-width: 100%;
+    }
+    &-right img {
+      margin-left: 0;
+      height: 250px;
+      width: 250px;
+    }
   }
 }
 
