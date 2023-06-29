@@ -128,7 +128,7 @@ export default function MainPage() {
                       journey together, where we can bring your ideas to life in
                       the most innovative and impactful ways!
                     </p>
-                    <p>
+                    <p className="about-techlist">
                       Here are a few technologies I’ve been working with
                       recently:
                     </p>
