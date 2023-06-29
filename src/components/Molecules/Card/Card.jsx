@@ -18,7 +18,7 @@ export default function Card({ projectData }) {
               </div>
               <ul className="project-tech-list">
                 {projectData.technologies.map((tech) => (
-                  <li>{tech}</li>
+                  <li key={tech}>{tech}</li>
                 ))}
               </ul>
               <div className="project-links">
@@ -58,7 +58,7 @@ export default function Card({ projectData }) {
               </div>
               <ul className="project-tech-list-reversed">
                 {projectData.technologies.map((tech) => (
-                  <li>{tech}</li>
+                  <li key={tech}>{tech}</li>
                 ))}
               </ul>
               <div className="project-links-reversed">
