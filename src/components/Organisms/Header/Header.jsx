@@ -47,6 +47,11 @@ const Header = () => {
     document.body.classList.toggle("disable-scroll");
   };
 
+  const handleSectionClick = () => {
+    setIsMenuOpen(false);
+    document.body.classList.toggle("disable-scroll");
+  };
+
   function MobileView() {
     return (
       <div className="header">
@@ -68,19 +73,19 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="mobile-nav">
             <ul className="mobile-nav-list">
-              <li className="mobile-nav-item">
+              <li onClick={handleSectionClick} className="mobile-nav-item">
                 <p className="purple">01. </p>
                 <Link href="#about">About</Link>
               </li>
-              <li className="mobile-nav-item">
+              <li onClick={handleSectionClick} className="mobile-nav-item">
                 <p className="purple">02. </p>
                 <Link href="#experience">Experience</Link>
               </li>
-              <li className="mobile-nav-item">
+              <li onClick={handleSectionClick} className="mobile-nav-item">
                 <p className="purple">03. </p>
                 <Link href="#work">Work</Link>
               </li>
-              <li className="mobile-nav-item">
+              <li onClick={handleSectionClick} className="mobile-nav-item">
                 <p className="purple">04. </p>
                 <Link href="#contact">Contact</Link>
               </li>
