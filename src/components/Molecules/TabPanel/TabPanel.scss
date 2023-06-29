@@ -1,3 +1,5 @@
+@import "../../../assets/theme/theme.scss";
+
 .box button {
     font-size: 20px;
     text-transform: capitalize;
@@ -14,11 +16,48 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.tabPanel {
-    width: 77%;
-}
-
 .ul-list {
+    margin-top: 2em;
     text-align: left;
     font-size: 18px;
+}
+
+.MuiButtonBase-root {
+    color: $dk-third-text !important; 
+}
+
+.MuiButtonBase-root:hover {
+    color: $dk-first-main-lighter !important;
+}
+
+.Mui-selected {
+    color:$dk-first-main !important;
+}
+
+.MuiTabs-indicator {
+    background-color: $dk-first-main !important;
+}
+
+.MuiButtonBase-root {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    font-family: "DM Mono", monospace !important;
+}
+
+.MuiTypography-root {
+    text-align: left;
+}
+
+.job-title {
+    font-size: 22px !important;
+    color: $dk-first-text;
+}
+
+.MuiTypography-root a {
+    font-size: 22px !important;
+}
+
+.smaller {
+    font-size: 18px !important;
+    color: $dk-second-text;
 }

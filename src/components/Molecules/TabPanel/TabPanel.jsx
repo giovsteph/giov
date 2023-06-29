@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -12,16 +12,14 @@ function TabPanel(props) {
   return (
     <div
       role="tabpanel"
-      className="tabPanel"
       hidden={value !== index}
-      id={`vertical-tabpanel-${index}`}
-      aria-labelledby={`vertical-tab-${index}`}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          {/* <Typography>{children}</Typography> */}
-          <Typography component="div">{children}</Typography>
+          <Typography>{children}</Typography>
         </Box>
       )}
     </div>
@@ -36,44 +34,39 @@ TabPanel.propTypes = {
 
 function a11yProps(index) {
   return {
-    id: `vertical-tab-${index}`,
-    "aria-controls": `vertical-tabpanel-${index}`,
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
   };
 }
 
-export default function VerticalTabs() {
-  const [value, setValue] = React.useState(0);
+export default function BasicTabs() {
+  const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   return (
-    <Box
-      className="box"
-      sx={{
-        width: "100%",
-        flexGrow: 1,
-        display: "flex",
-      }}
-    >
-      <Tabs
-        orientation="vertical"
-        value={value}
-        textColor="secondary"
-        indicatorColor="secondary"
-        onChange={handleChange}
-        aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: "divider" }}
-      >
-        <Tab label="Wizeline" {...a11yProps(0)} />
-        <Tab label="Neon Domain" {...a11yProps(1)} />
-        <Tab label="Laboratoria" {...a11yProps(2)} />
-      </Tabs>
+    <Box sx={{ width: "100%" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          indicatorColor="secondary"
+          aria-label="basic tabs example"
+          variant="scrollable"
+          scrollButtons
+          allowScrollButtonsMobile
+        >
+          <Tab label="Wizeline" {...a11yProps(0)} />
+          <Tab label="Neon Domain" {...a11yProps(1)} />
+          <Tab label="Laboratoria" {...a11yProps(2)} />
+        </Tabs>
+      </Box>
       <TabPanel value={value} index={0}>
         <div>
           <p>
-            <span>Software Engineer </span>
+            <p className="job-title">Software Engineer </p>
             <a
               href="https://www.wizeline.com/"
               rel="noreferrer"
@@ -82,7 +75,7 @@ export default function VerticalTabs() {
               @ Wizeline
             </a>
           </p>
-          <p>Jan 2022 - Present</p>
+          <p class="smaller">Jan 2022 - Present</p>
           <ul className="ul-list">
             <li>
               Actively participating in the development process throughout the
@@ -104,12 +97,12 @@ export default function VerticalTabs() {
       <TabPanel value={value} index={1}>
         <div>
           <p>
-            <span>Front End Developer </span>
+            <p className="job-title">Front End Developer </p>
             <a href="https://neondomain.com/" rel="noreferrer" target="_blank">
               @ Neon Domain
             </a>
           </p>
-          <p>May 2020 - December 2021</p>
+          <p className="smaller">May 2020 - December 2021</p>
           <ul className="ul-list">
             <li>
               Development and implementation of software solutions based on
@@ -133,7 +126,7 @@ export default function VerticalTabs() {
       <TabPanel value={value} index={2}>
         <div>
           <p>
-            <span>Front End Developer Bootcamp </span>
+            <p className="job-title">Front End Developer Bootcamp </p>
             <a
               href="https://www.laboratoria.la/"
               rel="noreferrer"
@@ -142,7 +135,7 @@ export default function VerticalTabs() {
               @ Laboratoria
             </a>
           </p>
-          <p>October 2019 - May 2020</p>
+          <p className="smaller">October 2019 - May 2020</p>
           <ul className="ul-list">
             <li>Simulated work environment.</li>
             <li>Learning TDD using Jest and React-Testing-Library.</li>
