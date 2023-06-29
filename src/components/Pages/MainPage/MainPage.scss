@@ -277,3 +277,11 @@ body {
     transform: scale(0.9);
   }
 }
+
+.hello-btn {
+  transition: .4s;
+}
+
+.hello-btn:hover {
+  transform: scale(1.2);
+}

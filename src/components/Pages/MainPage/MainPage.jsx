@@ -201,7 +201,9 @@ export default function MainPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Button className="primary smaller">Say Hello</Button>
+                    <Button className="primary smaller hello-btn">
+                      Say Hello
+                    </Button>
                   </a>
                 </div>
               </div>
